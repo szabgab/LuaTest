@@ -1,0 +1,5 @@
+The LuaTest project was started as means for learning Lua and in the meantime to write a set of
+unit test for Lua generating TAP output.
+
+Copyright Gabor Szabo <szabgab@gmail.com>
+
