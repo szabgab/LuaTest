@@ -28,3 +28,5 @@ function plan(n)
     print("1.." .. n)
 end
 
+function is_deeply(received, expected)
+end
