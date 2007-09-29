@@ -1,6 +1,7 @@
 module(..., package.seeall);
 
 counter = 0
+
 function ok(ok, name)
     counter = counter+1
     if name == nil then name = "" end
@@ -22,6 +23,7 @@ end
 function diag(name)
     print("# " .. name)
 end
+
 function plan(n)
     print("1.." .. n)
 end

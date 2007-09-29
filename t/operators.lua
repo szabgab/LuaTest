@@ -7,18 +7,18 @@ test.plan(62)
 -- test.ok(false, "bad")
 
 -- simple numeric calculations
-test.ok(1+1 == 2, '1+1=2')
-test.ok(4+2 == 6, '4+2=6')
-test.ok(1-1 == 0, '1-1=0')
-test.ok(1*1 == 1, '1*1=1')
-test.ok(0*1 == 0, '0*1=0')
-test.ok(4/2 == 2, '4/2=2')
-test.ok(5/2 == 2.5, '5/2=2.5')
+test.is(1+1, 2, '1+1=2')
+test.is(4+2, 6, '4+2=6')
+test.is(1-1, 0, '1-1=0')
+test.is(1*1, 1, '1*1=1')
+test.is(0*1, 0, '0*1=0')
+test.is(4/2, 2, '4/2=2')
+test.is(5/2, 2.5, '5/2=2.5')
 
 -- simple string operations
-test.ok("a" .. "b" == "ab", "concatenation a..b")
-test.ok("a" .. 2   == "a2", "concat str .. number")
-test.ok(4 .. 2   == "42", "concat number .. number")
+test.is("a" .. "b", "ab", "concatenation a..b")
+test.is("a" .. 2, "a2", "concat str .. number")
+test.is(4 .. 2, "42", "concat number .. number")
 
 -- TODO: print
 -- TODO: error messages

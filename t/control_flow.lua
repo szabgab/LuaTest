@@ -1,7 +1,7 @@
 
 require "test"
 
-test.plan(8)
+test.plan(14)
 
 test.diag("while loop")
 i = 3
@@ -44,4 +44,36 @@ repeat
 until i == 0
 test.is(i, 1, "while loop 3 iterations i=1")
 test.is(j, 2, "while loop 3 iterations j=2")
+
+i = 0 
+for c = 1,3 do i = i + 1 end
+test.is(i, 3, "for loop 3 iterations i=3")
+test.is(c, nil, "for loop iterator is nil")
+
+-- if ... then ... end
+-- if ... then ... else ... end
+-- if ... then ... elseif ... else ... end
+
+k = 0
+v = 0
+tbl = {11,22,33}
+for key,value in pairs(tbl) do 
+    k = k + key
+    v = v + value
+end
+test.is(k, 6, "k=6")
+test.is(v, 66, "v=66")
+
+
+k = 0
+v = 0
+tbl = {11,22,33}
+for key,value in ipairs(tbl) do 
+    k = k + key
+    v = v + value
+end
+test.is(k, 6, "k=6")
+test.is(v, 66, "v=66")
+
+
 
