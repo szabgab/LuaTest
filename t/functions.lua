@@ -43,4 +43,6 @@ function fib(n)
     end 
 end
 
+test.is(1, 2, "this should fail")
+
 
